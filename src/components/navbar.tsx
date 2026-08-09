@@ -36,10 +36,9 @@ export default function Navbar() {
                   LART REALTY
                 </Link>
                 <div className="flex flex-col gap-4 text-lg font-medium mt-4">
-                  <Link href="#properties" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Home className="w-5 h-5" /> Properties</Link>
-                  <Link href="#agents" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Info className="w-5 h-5" /> Agents</Link>
-                  <Link href="#neighborhoods" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Search className="w-5 h-5" /> Neighborhoods</Link>
-                  <Link href="#contact" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Phone className="w-5 h-5" /> Contact</Link>
+                  <Link href="/properties" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Home className="w-5 h-5" /> Properties</Link>
+                  <Link href="/agents" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Info className="w-5 h-5" /> Agents</Link>
+                  <Link href="/contact" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:text-primary transition-colors"><Phone className="w-5 h-5" /> Contact</Link>
                 </div>
               </nav>
             </SheetContent>
@@ -56,16 +55,15 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="#properties" className="hover:text-primary transition-colors">Properties</Link>
-          <Link href="#agents" className="hover:text-primary transition-colors">Agents</Link>
-          <Link href="#neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
-          <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
+          <Link href="/properties" className="hover:text-primary transition-colors">Properties</Link>
+          <Link href="/agents" className="hover:text-primary transition-colors">Agents</Link>
+          <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
         </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Button className="hidden md:inline-flex rounded-full px-6" render={<Link href="#contact">Consultation</Link>} />
+          <Button className="hidden md:inline-flex rounded-full px-6" render={<Link href="/contact">Consultation</Link>} />
         </div>
 
       </div>
